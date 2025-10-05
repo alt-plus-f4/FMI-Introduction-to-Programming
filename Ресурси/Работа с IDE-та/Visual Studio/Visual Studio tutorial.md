@@ -3,8 +3,8 @@
 
 За да си инсталирате Visual Studio кликвате [тук](https://visualstudio.microsoft.com/) и след това "Download Visual Studio". Отворете инсталационния файл, когато се изтегли. Когато се отвори кликвате "Continue".
 
-![](images/image.png)
-![](images/image.png)
+![](images/image-0.png)
+![](images/image-1.png)
 
 Скролвате и избирате "Desktop development with C++". След това кликвате "Install".
 
@@ -14,7 +14,7 @@
 
 ![](images/image-4.png)
 
-Ако вече имате акаунт в Github може с него да влезете. Ако ли не, просто кликнете "Skip and add accounts later.".
+Ако вече имате акаунт в Github може с него да влезете. Ако нямате такъв, просто кликнете "Skip and add accounts later.".
 
 ![](images/image-6.png)
 
@@ -32,7 +32,7 @@
 
 ![](images/image-8.png)
 
-Вече имате готов проект! Може да стартирате програмата си от зеления бутон. (Или просто Ctrl-F5)
+Вече имате готов проект! Може да стартирате програмата си от зеления бутон (или просто Ctrl-F5).
 
 ![](images/image-9.png)
 

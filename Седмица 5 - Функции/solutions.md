@@ -154,6 +154,7 @@ int main()
 }
 ```
 **Задача 10**  
+Логическият израз, който трябва да симулираме, е (`[a,b]` обединено с `[c,d]`) без `[e,f]` `<==>` `x` е в `[a,b]` и `x` е в `[c,d]` и `х` не е в `[e,f]`.  
 Отново хубав пример за преизползване на логика. Ползваме функцията `isInClosedInterval` да проверим както дали точката е вътре в интервала, така и дали е извън него. (само добавяме `!` в началото)  
 Пак трябва да отбележим, че така кода става и много по-четим за програмиста.
 ```cpp
@@ -175,9 +176,10 @@ int main()
     if (!isIntervalValid(a,b) || !isIntervalValid(c,d) || !isIntervalValid(e,f))
     {
         std::cout << "Invalid intervals!";
-        return;
+        return -1;  //we terminate the program early and signal an error
     }
-    bool result  = (isInClosedInterval(a,b,x) && isInClosedInterval(c,d,x) && !isInClosedInterval(e,f,x));
+    bool result  = ((isInClosedInterval(a,b,x) || isInClosedInterval(c,d,x)) && !isInClosedInterval(e,f,x));
     std::cout << std::boolalpha << result;
+    return 0;
 }
 ```

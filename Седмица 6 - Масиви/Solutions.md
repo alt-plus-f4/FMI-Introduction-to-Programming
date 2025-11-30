@@ -122,25 +122,57 @@ int main() {
 ```
 
 **Задача 4**  
-TODO
+Тук използваме функцията countOccurrences като подаваме съответния елемент на двата масива и проверяваме дали броя на срещанията е равен и в двата. Ако не, излизаме от цикъла и принтираме "false".
+
 ```cpp
-int main() {
-    int n;
-    std::cin >> n;
+int countOccurrences(int element, int numbers[], int size)
+{
+	int occCount = 0;
 
-    int arr1[32];
-    int arr2[32];
+	for (int i = 0; i < size; i++)
+	{
+		if (numbers[i] == element)
+		{
+			occCount++;
+		}
+	}
 
-    for (int i = 0; i < n; i++)
-    {
-        std::cin >> arr1[i];
-    }
+	return occCount;
+}
 
-    for (int i = 0; i < n; i++)
-    {
-        std::cin >> arr2[i];
-    }
+int main()
+{
+	int n;
+	std::cin >> n;
 
+	int firstArr[32];
+	int secondArr[32];
+
+	for (int i = 0; i < n; i++)
+	{
+		std::cin >> firstArr[i];
+	}
+	
+	for (int i = 0; i < n; i++)
+	{
+		std::cin >> secondArr[i];
+	}
+
+	bool isPermutation = true;
+
+	for (int i = 0; i < n; i++)
+	{
+		int firstArrOcc = countOccurrences(firstArr[i], firstArr, n);
+		int secondArrOcc = countOccurrences(secondArr[i], secondArr, n);
+
+		if (firstArrOcc != secondArrOcc)
+		{
+			isPermutation = false;
+			break;
+		}
+	}
+
+	std::cout << std::boolalpha << isPermutation;
 }
 ```
 
